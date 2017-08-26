@@ -12,11 +12,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -176,6 +179,33 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
              break;
      }
     }
-
+   /* @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_collection, menu);
+        return true;
+    }
+*/
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // TODO Auto-generated method stub
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+       /* if (item.getItemId() == R.id.action_store) {
+            if(!hasChange){
+                Toast.makeText(CollectionCreateActivity.this, "标题不能为空", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            CollectionManager.getInstance().setCollection(collectionBean);
+            hasChange = false;
+            RxBus.getDefault().post(new CollectionUpdateEvent(true));
+//            showSnackBar(cover,R.string.collection_edit_store);
+            finish();
+            return true;
+        }*/
+        return super.onOptionsItemSelected(item);
+    }
     //未完
 }
