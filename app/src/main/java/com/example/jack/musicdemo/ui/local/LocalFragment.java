@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.example.jack.musicdemo.R;
 import com.example.jack.musicdemo.collection.CollectionCreateActivity;
+import com.example.jack.musicdemo.collection.CollectionPlayActivity;
 import com.example.jack.musicdemo.data.CollectionBean;
 import com.example.jack.musicdemo.ui.adapter.CollectionAdapter;
 import com.example.jack.musicdemo.ui.adapter.OnItemClickListener;
@@ -75,7 +76,7 @@ public class LocalFragment extends Fragment {
             @Override
             public void onItemClick(CollectionBean item, int position) {
                 //若点击哪个收藏夹就跳转
-
+                CollectionPlayActivity.open(getActivity(),item);
             }
 
             @Override

@@ -44,7 +44,7 @@ import static com.example.jack.musicdemo.R.drawable.c;
 /**
  * 收藏夹创建界面
  */
-public class CollectionCreateActivity extends BaseActivity implements View.OnClickListener{
+public class CollectionCreateActivity extends AppCompatActivity implements View.OnClickListener{
      public static void open(Context context){
          open(context,-1);
      }

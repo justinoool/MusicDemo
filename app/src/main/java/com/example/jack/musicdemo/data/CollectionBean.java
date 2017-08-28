@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 /**
  * @desciption: 收藏夹实体类
+ *
+ * 这里有个知识点： 让实体类去实现Serializable就可以在 Intent 之间传输
  */
 
 public class CollectionBean implements Serializable{
