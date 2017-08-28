@@ -58,6 +58,10 @@
         </activity>
         <activity android:name=".collection.CollectionCreateActivity">
         </activity>
+        <activity android:name=".collection.CollectionPlayActivity">
+        </activity>
+        <activity android:name=".ui.album.MusicDetailActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -10,8 +10,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,19 +25,26 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.jack.musicdemo.BaseActivity;
 import com.example.jack.musicdemo.R;
 import com.example.jack.musicdemo.common.util.PhotoUtil;
+import com.example.jack.musicdemo.common.util.RxBus;
 import com.example.jack.musicdemo.data.CollectionBean;
+import com.example.jack.musicdemo.db.CollectionManager;
+import com.example.jack.musicdemo.model.event.CollectionUpdateEvent;
 
 import java.io.File;
+import java.util.Collection;
 
+import static android.R.attr.editable;
+import static android.R.attr.id;
 import static android.os.Build.VERSION_CODES.M;
 import static com.example.jack.musicdemo.R.drawable.c;
 
 /**
  * 收藏夹创建界面
  */
-public class CollectionCreateActivity extends AppCompatActivity implements View.OnClickListener{
+public class CollectionCreateActivity extends BaseActivity implements View.OnClickListener{
      public static void open(Context context){
          open(context,-1);
      }
@@ -45,6 +54,7 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
         intent.putExtra("cid",cid);
         context.startActivity(intent);
     }
+
     private Toolbar toolbar;
     private ImageView cover;
     private TextView title;
@@ -53,8 +63,8 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
     private PhotoUtil photoUtil;
 
     private CollectionBean collectionBean;
-    private int cid;
-    private boolean hasChange;
+    private int cid;//收藏夹id
+    private boolean hasChange; //是否改变
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,9 +93,36 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
         initData();
     }
 
+    //初始化
     private void initData() {
+      hasChange = false;
+        if(cid != -1){
+           collectionBean = CollectionManager.getInstance().getCollectionById(cid);//通过cid获取收藏夹实体类
+            cover.setImageURI(Uri.parse(collectionBean.getCoverUrl()));
+            title.setText(collectionBean.getTitle());
+            desEt.setText(collectionBean.getDescription());
+        }else{
+            collectionBean = new CollectionBean(-1, getString(R.string.collection_title_default), "", 0, "");//设置默认是bean
 
+        }
+       desEt.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {//文字改变之后
+                 hasChange =true;
+                 String des = s.toString();
+               collectionBean.setDescription(des);//将输入的文本存储到实体类中
+           }
+       });
     }
 
     @Override
@@ -136,6 +173,12 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     *  拍照、相册那相片、裁剪回调方法
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -179,33 +222,66 @@ public class CollectionCreateActivity extends AppCompatActivity implements View.
              break;
      }
     }
-   /* @Override
+  @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+       //导入menu，保存item
         getMenuInflater().inflate(R.menu.menu_collection, menu);
         return true;
     }
-*/
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
+        // 返回按钮
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            onBackPressed();//它是系统的，会帮你设置界面，如果想点击后有其他操作必须重写onBackPressed()
             return true;
         }
-       /* if (item.getItemId() == R.id.action_store) {
+        //保存按钮
+       if (item.getItemId() == R.id.action_store) {
             if(!hasChange){
                 Toast.makeText(CollectionCreateActivity.this, "标题不能为空", Toast.LENGTH_SHORT).show();
                 return false;
             }
-            CollectionManager.getInstance().setCollection(collectionBean);
+             CollectionManager.getInstance().setCollection(collectionBean);
             hasChange = false;
             RxBus.getDefault().post(new CollectionUpdateEvent(true));
 //            showSnackBar(cover,R.string.collection_edit_store);
             finish();
             return true;
-        }*/
+        }
         return super.onOptionsItemSelected(item);
     }
-    //未完
+
+    @Override
+    public void onBackPressed() {
+        if(hasChange){
+            new MaterialDialog.Builder(this)
+                    .title(R.string.collection_dialog_update_title)
+                    .content(R.string.collection_dialog_update_content)
+                    .positiveText(R.string.confirm)
+                    .negativeText(R.string.cancel)
+                    .onPositive(new MaterialDialog.SingleButtonCallback() {//确定监听
+                        @Override
+                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                            CollectionManager.getInstance().setCollection(collectionBean);//存入数据
+                            //发送一个事件
+                            RxBus.getDefault().post(new CollectionUpdateEvent(true));
+                            CollectionCreateActivity.this.onBackPressed();
+                            dialog.dismiss();//关闭
+                        }
+                    })
+                    .onNegative(new MaterialDialog.SingleButtonCallback() {//取消监听
+                        @Override
+                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                            hasChange = false;
+                            CollectionCreateActivity.this.onBackPressed();
+                            dialog.dismiss();//关闭
+                        }
+                    })
+                    .show();
+        }else{
+            super.onBackPressed();
+        }
+
+    }
 }

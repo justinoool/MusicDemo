@@ -8,6 +8,8 @@ import android.view.View;
  * WeChat:Justin-Tz
  * 本地音乐下 单曲碎片中的 recyclerview 适配器 的 列表点击接口
  * 就是点击事件抽取出来做了个回调
+ *
+ * 作用：可以用作所有recyclerview列表的监听回调
  */
 
 public interface OnItemClickListener<T> {

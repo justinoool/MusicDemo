@@ -167,6 +167,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -181,7 +182,7 @@
                         android:textSize="@dimen/text_body"/>
 
                     <ImageView
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:id="@+id/add"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -194,13 +195,13 @@
 
                 </RelativeLayout>
 
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/recycler_collection_listitem">
                 </android.support.v7.widget.RecyclerView>
-
             </LinearLayout>
 
 
