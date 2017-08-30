@@ -1,4 +1,4 @@
-package com.example.jack.musicdemo.common.util;
+package com.example.jack.musicdemo.common.utils;
 
 import android.content.ContentUris;
 import android.content.Context;

@@ -14,7 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.jack.musicdemo.R;
-import com.example.jack.musicdemo.common.util.GlideUtils;
+
+import com.example.jack.musicdemo.common.utils.GlideUtils;
 import com.example.jack.musicdemo.data.CollectionBean;
 import com.example.jack.musicdemo.data.Song;
 import com.example.jack.musicdemo.service.MusicPlayerManager;
@@ -41,15 +42,16 @@ public class MusicDetailActivity extends AppCompatActivity implements OnSongchan
 
     private Toolbar mToolbar;
     protected RecyclerView refreshView;
+
     //private RankingInsideAdapter musicAdapter;
-   // private NewSongInsideAdapter mSongInsideAdapter;
+    // private NewSongInsideAdapter mSongInsideAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_detail);
         ButterKnife.bind(this);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().getEnterTransition().setDuration(500);
         }
         MusicPlayerManager.get().registerListener(this);
@@ -65,8 +67,8 @@ public class MusicDetailActivity extends AppCompatActivity implements OnSongchan
 
 
     private void initToolBar() {
-       mToolbar = (Toolbar) findViewById(R.id.toolbar);
-     setSupportActionBar(mToolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,11 +77,12 @@ public class MusicDetailActivity extends AppCompatActivity implements OnSongchan
             }
         });
     }
-public void setCollectionData(CollectionBean collection){
-    GlideUtils.with(this,collection.getCoverUrl(),R.drawable.a8y,mAlbumArt);
-    mToolbar.setTitle(collection.getTitle());
-    layout_avatar.setVisibility(View.GONE);
-}
+
+    public void setCollectionData(CollectionBean collection) {
+        GlideUtils.with(this, collection.getCoverUrl(), R.drawable.a8y, mAlbumArt);
+        mToolbar.setTitle(collection.getTitle());
+        layout_avatar.setVisibility(View.GONE);
+    }
 
     @Override
     public void onSongChanged(Song song) {

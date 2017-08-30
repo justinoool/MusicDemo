@@ -16,7 +16,7 @@
  * limitations under the License.
  * @Date: 2015/10/21 0021-下午 3:08
  */
-package com.example.jack.musicdemo.common.util;
+package com.example.jack.musicdemo.common.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

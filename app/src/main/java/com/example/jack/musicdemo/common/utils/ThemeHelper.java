@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.jack.musicdemo.common.util;
+package com.example.jack.musicdemo.common.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

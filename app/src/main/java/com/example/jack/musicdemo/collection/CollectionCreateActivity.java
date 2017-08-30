@@ -25,21 +25,15 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.jack.musicdemo.BaseActivity;
 import com.example.jack.musicdemo.R;
-import com.example.jack.musicdemo.common.util.PhotoUtil;
-import com.example.jack.musicdemo.common.util.RxBus;
+
+import com.example.jack.musicdemo.common.utils.PhotoUtil;
+import com.example.jack.musicdemo.common.utils.RxBus;
 import com.example.jack.musicdemo.data.CollectionBean;
 import com.example.jack.musicdemo.db.CollectionManager;
 import com.example.jack.musicdemo.model.event.CollectionUpdateEvent;
 
 import java.io.File;
-import java.util.Collection;
-
-import static android.R.attr.editable;
-import static android.R.attr.id;
-import static android.os.Build.VERSION_CODES.M;
-import static com.example.jack.musicdemo.R.drawable.c;
 
 /**
  * 收藏夹创建界面

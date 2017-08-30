@@ -15,9 +15,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.jack.musicdemo.R;
-import com.example.jack.musicdemo.common.util.ImageUtils;
+
+import com.example.jack.musicdemo.common.utils.ImageUtils;
 import com.example.jack.musicdemo.data.Song;
 import com.example.jack.musicdemo.service.MusicPlayerManager;
 import com.example.jack.musicdemo.service.OnSongchangeListener;
@@ -29,10 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import magicasakura.widgets.TintImageView;
-import magicasakura.widgets.TintProgressBar;
 import rx.Subscription;
-
-import static android.os.Build.VERSION_CODES.M;
 
 /**
  * A simple {@link Fragment} subclass.

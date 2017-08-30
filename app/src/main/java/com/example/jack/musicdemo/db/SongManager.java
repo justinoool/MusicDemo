@@ -3,7 +3,7 @@ package com.example.jack.musicdemo.db;
 import android.text.TextUtils;
 
 
-import com.example.jack.musicdemo.common.util.FileUtils;
+import com.example.jack.musicdemo.common.utils.FileUtils;
 import com.example.jack.musicdemo.data.Song;
 import com.example.jack.musicdemo.db.dao.SongDao;
 

@@ -2,6 +2,7 @@ package com.example.jack.musicdemo.service;
 
 import android.app.IntentService;
 import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.PowerManager;
 import android.support.v4.media.session.PlaybackStateCompat;
@@ -94,11 +95,20 @@ public class MusicPlayerManager implements MediaPlayer.OnPreparedListener, Media
         play(mMusicPlaylist.getCurrentPlay());
     }
 
+    //判断是否在播放
+    public boolean isPlaying() {
+        if (mMusicService.getState() == PlaybackStateCompat.STATE_PLAYING) {
+            return true;
+        }
+        return false;
+    }
+
+
     /**
      * 直接播放
      */
     public void play() {
-        if (mMusicPlaylist != null || mMusicPlaylist.getCurrentPlay() == null) {
+        if (mMusicPlaylist == null || mMusicPlaylist.getCurrentPlay() == null) {
             return;
         }
         play(mMusicPlaylist.getCurrentPlay());
@@ -123,9 +133,10 @@ public class MusicPlayerManager implements MediaPlayer.OnPreparedListener, Media
                 createMediaPlayerIfNeed();
                 mMusicService.setState(PlaybackStateCompat.STATE_PLAYING);
 
+                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 mediaPlayer.setDataSource(mContext, song.getUri());
                 mediaPlayer.prepareAsync();
-                    //监听
+                //监听
                 for (OnSongchangeListener l : changeListeners) {
                     l.onSongChanged(song);
                 }
@@ -216,6 +227,7 @@ public class MusicPlayerManager implements MediaPlayer.OnPreparedListener, Media
 
     /**
      * 获取播放列表
+     *
      * @return
      */
     public MusicPlaylist getMusicPlayList() {
@@ -237,7 +249,7 @@ public class MusicPlayerManager implements MediaPlayer.OnPreparedListener, Media
     }
 
     /**
-     *   进度拖拽
+     * 进度拖拽
      */
 
     public void seekTo(int progress) {
@@ -366,22 +378,23 @@ public class MusicPlayerManager implements MediaPlayer.OnPreparedListener, Media
         return PlaybackStateCompat.STATE_STOPPED;
     }
 
- public void registerListener(OnSongchangeListener listener){
-     //注册监听器
-     changeListeners.add(listener);
- }
-public void unregisterListener(OnSongchangeListener listener){
-    changeListeners.remove(listener);
-}
+    public void registerListener(OnSongchangeListener listener) {
+        //注册监听器
+        changeListeners.add(listener);
+    }
+
+    public void unregisterListener(OnSongchangeListener listener) {
+        changeListeners.remove(listener);
+    }
 
     //封装一个播放或暂停，让其他类调用
-public void playOrPause() {
-    if (getState() == PlaybackStateCompat.STATE_PLAYING) {
+    public void playOrPause() {
+        if (getState() == PlaybackStateCompat.STATE_PLAYING) {
 
-        pause();
-    } else {
-        play();
+            pause();
+        } else {
+            play();
+        }
     }
-}
 
 }

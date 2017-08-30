@@ -3,20 +3,18 @@ package com.example.jack.musicdemo.presenter;
 
 import android.content.Context;
 
-import com.example.jack.musicdemo.common.util.LocalMusicLibrary;
+
+import com.example.jack.musicdemo.common.utils.LocalMusicLibrary;
 import com.example.jack.musicdemo.data.Song;
 import com.example.jack.musicdemo.model.ILocalView;
 
 import java.util.List;
 
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
-
-import static com.example.jack.musicdemo.R.drawable.c;
 
 /**
  * Created by ${justin} on 2017/8/1916: 22

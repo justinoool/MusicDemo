@@ -70,9 +70,10 @@ public class LocalFragment extends Fragment {
         mCollectionAdapter = new CollectionAdapter(getActivity());
 
         setHeaderView(mRecyclerView);
+
       mRecyclerView.setAdapter(mCollectionAdapter);
 
-        mCollectionAdapter.setItemClickListenter(new OnItemClickListener<CollectionBean>() {
+        mCollectionAdapter.setItemClickListener(new OnItemClickListener<CollectionBean>() {
             @Override
             public void onItemClick(CollectionBean item, int position) {
                 //若点击哪个收藏夹就跳转
@@ -85,6 +86,7 @@ public class LocalFragment extends Fragment {
 
             }
         });
+
         return view;
     }
 

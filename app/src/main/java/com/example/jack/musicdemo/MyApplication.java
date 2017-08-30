@@ -6,7 +6,8 @@ import android.os.Environment;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 
-import com.example.jack.musicdemo.common.util.ThemeHelper;
+
+import com.example.jack.musicdemo.common.utils.ThemeHelper;
 import com.facebook.cache.disk.DiskCacheConfig;
 import com.facebook.common.internal.Supplier;
 import com.facebook.drawee.backends.pipeline.Fresco;

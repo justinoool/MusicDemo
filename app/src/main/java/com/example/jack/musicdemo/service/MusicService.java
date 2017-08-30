@@ -76,6 +76,7 @@ public class MusicService extends Service implements OnSongchangeListener{
     public void setUp() {
         //在这个管理类中去写初始化的内容
         mPlayerManager = MusicPlayerManager.from(this);
+        mPlayerManager.registerListener(this);
         setUpMediaSession();
     }
 
@@ -136,33 +137,42 @@ public class MusicService extends Service implements OnSongchangeListener{
     @Override
     public void onDestroy() {
         super.onDestroy();
-
+        mPlayerManager.unregisterListener(this);
+        mediaSession.release();
     }
 
     class MediaSessionCallback extends MediaSessionCompat.Callback {
         @Override
         public void onPlay() {
-            super.onPlay();
+            mPlayerManager.resume();
+           setState(PlaybackStateCompat.STATE_PLAYING);
         }
 
         @Override
         public void onPause() {
-            super.onPause();
+            mPlayerManager.pause();
+            setState(PlaybackStateCompat.STATE_PAUSED);
         }
 
         @Override
         public void onStop() {
             super.onStop();
+            mPlayerManager.stop();
+            setState(PlaybackStateCompat.STATE_STOPPED);
         }
 
         @Override
         public void onSkipToPrevious() {
             super.onSkipToPrevious();
+            mPlayerManager.playPre();
+            setState(PlaybackStateCompat.STATE_SKIPPING_TO_PREVIOUS);
         }
 
         @Override
         public void onSkipToNext() {
             super.onSkipToNext();
+            mPlayerManager.playNext();
+            setState(PlaybackStateCompat.STATE_SKIPPING_TO_NEXT);
         }
 
         /**
@@ -172,7 +182,8 @@ public class MusicService extends Service implements OnSongchangeListener{
          */
         @Override
         public void onSeekTo(long pos) {
-            super.onSeekTo(pos);
+            mPlayerManager.seekTo((int) pos);
+            setState(PlaybackStateCompat.STATE_BUFFERING);
         }
     }
     //mediasession框架已经帮我们做好了这些功能

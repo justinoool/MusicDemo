@@ -49,7 +49,7 @@ public class CollectionPlayPresenter {
      * 收集collection数据
      */
     public void init() {
-        if (collectionBean == null) {
+        if (collectionBean == null || collectionBean.getId() == -1) {
             collectionPlayView.fail(new Throwable("collectionBean can not is null!"));
             return;
         }

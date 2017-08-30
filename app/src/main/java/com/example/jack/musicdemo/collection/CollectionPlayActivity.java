@@ -38,7 +38,8 @@ public class CollectionPlayActivity extends MusicDetailActivity implements Colle
         super.onCreate(savedInstanceState);
         //获取出传过来的收藏夹实体类
         mCollectionBean = (CollectionBean) getIntent().getSerializableExtra("collection");
-        if(mCollectionBean == null){
+
+        if(mCollectionBean == null ){
             finish();
         }
         cpPresenter = new CollectionPlayPresenter(this,mCollectionBean);

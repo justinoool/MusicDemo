@@ -1,4 +1,4 @@
-package com.example.jack.musicdemo.common.util;
+package com.example.jack.musicdemo.common.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,7 +12,7 @@ import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.example.jack.musicdemo.common.util.net.callback.ImageCallback;
+import com.example.jack.musicdemo.common.net.callbacks.ImageCallback;
 
 
 /**

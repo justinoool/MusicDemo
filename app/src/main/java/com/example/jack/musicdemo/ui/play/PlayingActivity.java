@@ -15,12 +15,13 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.example.jack.musicdemo.BaseActivity;
 import com.example.jack.musicdemo.R;
-import com.example.jack.musicdemo.common.util.ImageUtils;
+
+import com.example.jack.musicdemo.common.utils.ImageUtils;
+import com.example.jack.musicdemo.common.utils.RxBus;
 import com.example.jack.musicdemo.data.Song;
 import com.example.jack.musicdemo.service.MusicPlayerManager;
+import com.example.jack.musicdemo.service.MusicService;
 import com.example.jack.musicdemo.service.OnSongchangeListener;
 
 import java.text.DecimalFormat;
@@ -32,8 +33,6 @@ import butterknife.OnClick;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
-
-import static android.os.Build.VERSION_CODES.M;
 
 /**
  * 歌曲播放界面
@@ -215,6 +214,9 @@ public class PlayingActivity extends AppCompatActivity implements OnSongchangeLi
         //图标
         if(MusicPlayerManager.get().getPlayingSong() != null){ //意味当前界面是有歌曲播放,就是一点歌曲进入界面是播放按钮是两杠
             mPlayingPlay.setImageResource(R.drawable.play_rdi_btn_pause);
+        } else{
+            mPlayingPlay.setImageResource(R.drawable.play_btn_play);
+
         }
     }
 
@@ -234,7 +236,16 @@ public class PlayingActivity extends AppCompatActivity implements OnSongchangeLi
      */
     @Override
     public void onPlayBackStateChanged(PlaybackStateCompat state) {
+         updatePlayStatus();
+    }
 
+    private void updatePlayStatus() {
+        if (MusicPlayerManager.get().getState() == PlaybackStateCompat.STATE_PLAYING) {
+            mPlayingPlay.setImageResource(R.drawable.play_btn_pause);
+        } else if (MusicPlayerManager.get().getState() == PlaybackStateCompat.STATE_PAUSED) {
+            mPlayingPlay.setImageResource(R.drawable.play_btn_play);
+
+        }
     }
   /*  private void initMusic() {
         //获取歌曲的数据
@@ -300,6 +311,7 @@ public class PlayingActivity extends AppCompatActivity implements OnSongchangeLi
             case R.id.playing_pre:
                 //   palyMusicByStatu(2);
                 MusicPlayerManager.get().playPre();
+                updateData();
                 break;
             case R.id.playing_play:
             /*    if (mMediaPlayer != null) {
@@ -315,17 +327,21 @@ public class PlayingActivity extends AppCompatActivity implements OnSongchangeLi
                 }*/
                 if(MusicPlayerManager.get().getState() == PlaybackStateCompat.STATE_PLAYING){
                     //若为播放状态
-                    MusicPlayerManager.get().pause();
+                   MusicPlayerManager.get().pause();
+                    updateData();
+
                     mPlayingPlay.setImageResource(R.drawable.play_rdi_btn_play);
                 }else if(MusicPlayerManager.get().getState() == PlaybackStateCompat.STATE_PAUSED){
                     //若为暂停状态
                     MusicPlayerManager.get().play();
+                    updateData();
                     mPlayingPlay.setImageResource(R.drawable.play_rdi_btn_pause);
                 }
                 break;
             case R.id.playing_next:
                 MusicPlayerManager.get().playNext();
                 //   palyMusicByStatu(1);
+                updateData();
                 break;
         }
     }

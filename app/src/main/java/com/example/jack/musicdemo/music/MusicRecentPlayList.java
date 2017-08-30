@@ -1,17 +1,15 @@
 package com.example.jack.musicdemo.music;
 
 import com.example.jack.musicdemo.MyApplication;
-import com.example.jack.musicdemo.common.util.ACache;
+
+import com.example.jack.musicdemo.common.utils.ACache;
 import com.example.jack.musicdemo.data.Song;
 
 import java.util.ArrayList;
 
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscriber;
 import rx.schedulers.Schedulers;
-
-import static android.os.Build.VERSION_CODES.M;
 
 /**
  * Created by ${justin} on 2017/8/2420: 45
