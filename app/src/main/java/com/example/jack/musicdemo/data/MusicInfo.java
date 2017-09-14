@@ -6,7 +6,11 @@ package com.example.jack.musicdemo.data;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+/*1.实现Serializable接口,实现Serializable接口是JavaSE本身就支持的;
 
+2.实现Parcelable接口,Parcelable是Android特有的功能，效率比实现Serializable接口高，像用于Intent数据传递也都支持，而且还可以用在进程间通信(IPC)，
+
+        除了基本类型外，只有实现了Parcelable接口的类才能被放入Parcel中。*/
 public class MusicInfo implements Parcelable {
 
     public static final String KEY_SONG_ID = "songid";

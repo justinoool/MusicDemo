@@ -65,6 +65,7 @@
                             android:layout_height="270dp"
                             android:layout_alignParentTop="true"
                             android:scaleType="centerCrop"/>
+
                     </FrameLayout>
 
 
