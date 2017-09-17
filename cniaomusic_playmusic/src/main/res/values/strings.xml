@@ -1,0 +1,133 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">菜鸟音乐</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="duration_format" translatable="false"><xliff:g id="hours">%1$s</xliff:g> <xliff:g id="minutes">%2$s</xliff:g></string>
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+    <string name="music_unknown">unknown</string>
+    <string name="myfavor">我喜欢的音乐</string>
+    <string name="share">菜鸟音乐分享</string>
+    <string name="setting">Setting</string>
+
+    <string name="music_playing_none">当前无歌曲在播放</string>
+    <string name="local_music">本地音乐</string>
+    <string name="recent_play">最近播放</string>
+    <string name="local_manage">下载管理</string>
+    <string name="my_artist">我的歌手</string>
+    <string name="created_playlists">创建的歌单</string>
+    <string name="my_fav_playlist">我喜欢的音乐</string>
+    <string name="shared_to">分享到</string>
+
+    <!--################## 音乐专辑分类 ####################-->
+    <string name="album">专辑</string>
+    <string name="album_new_title">新曲速递</string>
+    <string name="album_new_subtitle">NEW ALBUM</string>
+    <string name="album_hot_title">音乐热榜</string>
+    <string name="album_hot_subtitle">HOT ALBUM</string>
+
+    <!--################## 音乐电台分类 ####################-->
+    <string name="radio">电台</string>
+    <string name="radio_new_title">最新电台</string>
+    <string name="radio_new_subtitle">NEW RADIO</string>
+    <string name="radio_hot_title">流行电台</string>
+    <string name="radio_hot_subtitle">POPULAR</string>
+
+    <!--################## 播放详情页 ####################-->
+    <string name="music_fav">收藏专题,并对其进行评价吧！</string>
+    <string name="music_unfav">确定取消收藏吗？</string>
+    <string name="music_share_cover">share_cover</string>
+    <string name="music_more">MORE</string>
+    <string name="music_message_error">歌曲信息错误</string>
+    <string name="music_more_title">更多</string>
+    <string name="music_player">音乐播放器</string>
+    <string name="music_mode_single">单曲播放</string>
+    <string name="music_mode_random">随机播放</string>
+    <string name="music_mode_cycle">循环播放</string>
+    <string name="music_explore_title">发现歌曲</string>
+    <string name="music_explore_wait">正在为你搜索歌曲,请稍候…</string>
+    <string name="music_explore_fail">获取歌曲失败,请重试…</string>
+    <string name="music_playlist_next_null">没有正在播放的歌曲队列</string>
+    <string name="music_playlist_album_fail">无法获取歌曲专辑信息</string>
+    <string name="music_playlist_album">正在获取专辑信息…</string>
+
+    <!--################## 本地歌曲 ####################-->
+    <string name="local_library">本地歌曲</string>
+    <string name="local_music_fragment_title">歌曲</string>
+    <string name="local_album_fragment_title">专辑</string>
+    <string name="local_artist_fragment_title">艺术家</string>
+
+    <string name="menu_song_play">播放</string>
+    <string name="menu_song_addto_playlist">添加到播放列表</string>
+    <string name="menu_song_addto_fav">添加到收藏夹</string>
+    <string name="menu_song_goto_parent">专辑详情</string>
+    <string name="menu_song_download">下载</string>
+    <string name="menu_song_delete">删除</string>
+
+    <!--################## 歌单分类 ####################-->
+    <string name="collect">歌单</string>
+    <string name="collect_recently_title">最近播放</string>
+    <string name="collect_album_title">萌否收藏</string>
+    <string name="collect_title">我的收藏夹</string>
+    <string name="collection_create">创建你的收藏夹</string>
+    <string name="collection_create_title">新建收藏夹</string>
+    <string name="collection_title_default">默认收藏夹</string>
+    <string name="collection_edit_title">编辑收藏夹</string>
+    <string name="collection_edit_name">名称</string>
+    <string name="collection_edit_content">收藏夹标题</string>
+    <string name="collection_edit_cover">封面</string>
+    <string name="collection_edit_hint">暂无描述</string>
+    <string name="collection_edit_cover_small">图像太小</string>
+    <string name="collection_edit_store">保存完毕</string>
+    <string name="collection_dialog_cover_title">更换封面</string>
+    <string name="collection_dialog_selection_title">选择你的收藏夹</string>
+    <string name="collection_dialog_name">收藏夹名称</string>
+    <string name="collection_dialog_update_title">收藏夹</string>
+    <string name="collection_dialog_update_content">要保存更改的内容吗</string>
+
+    <string name="collect_song_success">歌曲收藏成功</string>
+    <string name="collect_song_fail">歌曲收藏失败</string>
+
+    <!--################## 通用 ####################-->
+    <string name="fav">收藏</string>
+    <string name="confirm">确定</string>
+    <string name="evaluation">评价</string>
+    <string name="song">%1$d首</string>
+    <string name="menu_collection_edit">编辑收藏夹信息</string>
+    <string name="menu_collection_delete">删除收藏夹</string>
+
+    <string name="menu_favourite_all">全部</string>
+    <string name="menu_favourite_album">专辑</string>
+    <string name="menu_favourite_radio">电台</string>
+
+    <string name="menu_clearall">清空播放列表</string>
+
+    <string name="menu_collection_store">保存</string>
+
+    <string name="queue_is_empty">播放队列为空</string>
+    <string name="random_play">随机播放</string>
+    <string name="loop_play">列表循环</string>
+    <string name="play_one">单曲播放</string>
+
+    <string name="sure_to_delete_music">确定删除歌曲吗</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="search_local_music">搜索本地歌曲</string>
+    <string name="search_net_music">搜索音乐、歌手、歌词、...</string>
+    <string name="sure_to_set_ringtone">确定成设置铃声吗</string>
+
+    <string name="set_ringtone_successed">设置铃声成功！</string>
+
+    <string name="search">搜索</string>
+    <string name="action_connect">连接设备</string>
+    <string name="timing">定时播放</string>
+    <string name="exit">退出</string>
+    <string name="search_hint">歌名/歌手名</string>
+    <string name="title_activity_search_">Search_Activity</string>
+    <string name="dialog_fire_missiles">您确定要退出吗</string>
+    <string name="fire">确定</string>
+
+    <string name="next_play">已加入下一首播放</string>
+
+</resources>

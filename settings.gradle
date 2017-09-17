@@ -1,1 +1,1 @@
-include ':app', ':retrofit2demo'
+include ':app', ':retrofit2demo', ':cniaomusic_playmusic'

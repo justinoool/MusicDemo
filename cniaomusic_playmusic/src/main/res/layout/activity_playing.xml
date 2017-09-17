@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/bg01"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"/>
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Theme.AppCompat"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <FrameLayout
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="-6dp"
+            android:visibility="invisible"
+            app:layout_heightPercent="60%">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/play_disc_halo"
+                    app:layout_heightPercent="77%"
+                    app:layout_widthPercent="76%"/>
+
+                <com.cainiao5.cainiaomusic.ui.widget.AlbumViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"/>
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/play_topbar_line"/>
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/lrcviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:visibility="visible"
+            app:layout_heightPercent="70%">
+
+            <LinearLayout
+                android:id="@+id/volume_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/play_icn_speaker"/>
+
+                <SeekBar
+                    android:id="@+id/volume_seek"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="40dp"
+                    android:focusable="true"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/volume_seekbar"
+                    android:thumb="@drawable/play_volumebar_btn"
+                    android:thumbOffset="3.0dip"/>
+            </LinearLayout>
+
+
+            <com.cainiao5.cainiaomusic.ui.widget.lrcview.LrcView
+                android:id="@+id/lrc_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@android:color/black"
+                app:lrcAnimationDuration="600"
+                app:lrcCurrentTextColor="@color/theme_color_Primary"
+                app:lrcDividerHeight="16dp"
+                app:lrcLabel="找不到歌词(&gt;_&lt;)"
+                app:lrcNormalTextColor="@android:color/white"
+                app:lrcPadding="100dp"
+                app:lrcTextSize="17sp"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headerView"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="-20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/music_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="-10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/playing_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_rdi_icn_love"/>
+
+                <ImageView
+                    android:id="@+id/playing_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_icn_dlded_dis"/>
+
+                <ImageView
+                    android:id="@+id/playing_cmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_icn_cmt_number_dis"/>
+
+                <ImageView
+                    android:id="@+id/playing_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_icn_more"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/music_duration_played"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="00:00"
+                    android:textColor="@color/white_text"
+                    android:textSize="10sp"/>
+
+                <com.cainiao5.cainiaomusic.ui.widget.PlayerSeekBar
+                    android:id="@+id/play_seek"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="22"
+                    android:maxHeight="8dp"
+                    android:minHeight="8dp"
+                    android:progressDrawable="@drawable/play_seekbar"
+                    android:secondaryProgress="0"
+                    android:thumb="@drawable/play_plybar_btn"/>
+
+                <TextView
+                    android:id="@+id/music_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="00:00"
+                    android:textColor="@color/white_text"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/playing_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_icn_loop_prs"/>
+
+                <ImageView
+                    android:id="@+id/playing_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_btn_prev"/>
+
+                <ImageView
+                    android:id="@+id/playing_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_rdi_btn_play"/>
+
+                <ImageView
+                    android:id="@+id/playing_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_btn_next"/>
+
+                <ImageView
+                    android:id="@+id/playing_playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_icn_src_prs"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

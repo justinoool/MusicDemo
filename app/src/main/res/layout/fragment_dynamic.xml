@@ -1,13 +1,19 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.example.jack.musicdemo.ui.dynamic.DynamicFragment">
+                tools:context="com.example.jack.musicdemo.ui.dynamic.DynamicFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+   <android.support.v7.widget.RecyclerView
+       android:scrollbars="none"
+       android:id="@+id/dynamic_recyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 
-</FrameLayout>
+    <include layout="@layout/bottom_empty"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentStart="true"
+             android:id="@+id/include"></include>
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:padding="@dimen/horizontal_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/ic_red_singer"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/up_avtar"/>
+
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/blue_dark"
+                            android:textSize="@dimen/text_button"
+                            android:id="@+id/up_user"
+                            android:text="上传者"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textSize="@dimen/text_button"
+                            android:text="发布短视频:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/addToPlayListDisabled"
+                        android:textSize="@dimen/text_body"
+                        android:text="最近"
+                        android:id="@+id/up_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:textColor="@color/theme_color_Primary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:text="+关注"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/up_decs"
+                android:textColor="@color/black_normal"
+                android:text="视频描述"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:id="@+id/videoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_alpha"/>
+
+
+
+</LinearLayout>
