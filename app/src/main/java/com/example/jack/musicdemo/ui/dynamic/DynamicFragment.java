@@ -71,13 +71,16 @@ public class DynamicFragment extends Fragment {
         adapterVideoList = new RecyclerViewVideoAdapter(getActivity());
         recyclerView.setAdapter(adapterVideoList);
 
-        recyclerView.addOnScrollListener(new EndLessOnScrollListener(mLinearLayoutManager) {
+     recyclerView.addOnScrollListener(new EndLessOnScrollListener(mLinearLayoutManager) {
             @Override
             public void onLoadMore(int currentPage) {
+
                 initData(currentPage++);
-                Toast.makeText(getActivity(), "滑动了", Toast.LENGTH_SHORT).show();
+
+
             }
         });
+
 
         return inflate;
     }
@@ -114,8 +117,6 @@ public class DynamicFragment extends Fragment {
                     public void onNext(DynamicInfo dynamicInfo) {
                         List<DynamicInfo.BodyBean.DetailBean> detail = dynamicInfo.getBody().getDetail();
                         adapterVideoList.setData(detail);
-                        adapterVideoList.notify();
-
                     }
                 });
     }

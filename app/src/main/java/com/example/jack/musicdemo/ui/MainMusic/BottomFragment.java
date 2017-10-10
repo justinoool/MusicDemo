@@ -25,11 +25,14 @@ import com.example.jack.musicdemo.ui.local.BaseFragment;
 import com.example.jack.musicdemo.ui.play.PlayingActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import magicasakura.widgets.TintImageView;
 import rx.Subscription;
+
 
 /**
  * A simple {@link Fragment} subclass.

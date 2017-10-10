@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/line_length_half">
+
+        <com.cainiao5.cainiaomusic.ui.widget.SquareImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/music_share_cover"
+            tools:src="@drawable/cover" />
+
+        <TextView
+            android:id="@+id/album_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cover"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/black_normal"
+            android:textSize="@dimen/text_caption"
+            tools:text="KUMAMIKO DANCING" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/album_title"
+            android:paddingLeft="4dp"
+            android:paddingRight="8dp">
+
+            <LinearLayout
+                android:id="@+id/album_sub_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:padding="@dimen/icon_inline_padding"
+                    android:src="@drawable/songs_count"
+                    android:tintMode="multiply" />
+
+                <TextView
+                    android:id="@+id/album_sub_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black_alpha"
+                    android:textSize="@dimen/text_caption"
+                    tools:text="12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/album_fav_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:padding="@dimen/icon_inline_padding"
+                    android:src="@drawable/songs_fav" />
+
+                <TextView
+                    android:id="@+id/album_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black_alpha"
+                    android:textSize="@dimen/text_caption"
+                    tools:text="56" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/album_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/black_alpha"
+                android:textSize="@dimen/text_caption"
+                tools:text="08/01" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+

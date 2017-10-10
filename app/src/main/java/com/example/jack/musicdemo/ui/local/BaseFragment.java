@@ -16,7 +16,7 @@ import com.example.jack.musicdemo.R;
 import com.example.jack.musicdemo.service.MusicPlayerManager;
 import com.example.jack.musicdemo.ui.play.PlayingActivity;
 
-import kr.co.namee.permissiongen.PermissionGen;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,13 +26,7 @@ public class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PermissionGen.needPermission(BaseFragment.this, 100,
-                new String[] {
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_CONTACTS
-                }
-        );
+
     }
 
     /**

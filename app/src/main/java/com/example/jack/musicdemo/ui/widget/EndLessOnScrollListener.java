@@ -2,6 +2,7 @@ package com.example.jack.musicdemo.ui.widget;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 public abstract class EndLessOnScrollListener extends  RecyclerView.OnScrollListener{
 
@@ -47,7 +48,7 @@ public abstract class EndLessOnScrollListener extends  RecyclerView.OnScrollList
 
         //这里需要好好理解
         if (!loading && totalItemCount-visibleItemCount <= firstVisibleItem){
-            currentPage++;
+            currentPage ++;
             onLoadMore(currentPage);
             loading = true;
         }

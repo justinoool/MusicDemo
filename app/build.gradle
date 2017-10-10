@@ -31,30 +31,39 @@ dependencies {
 
     compile 'com.lapism:searchview:3.8'
     compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v13:25.3.1'
+    compile 'com.android.support:percent:25.3.1'
+    compile 'com.facebook.fresco:fresco:1.5.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+
+
+
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.facebook.fresco:fresco:1.5.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
-    compile 'com.android.support:percent:25.3.1'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.github.promeg:tinypinyin:1.0.0'
+    compile 'com.lb:materialdesigndialog:1.0.0'
     compile 'com.squareup.okhttp:okhttp:2.7.2'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.2'
     compile 'net.cpacm.simpleslider:library:1.0.3'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
-    compile 'com.lovedise:permissiongen:0.0.6'
-    compile 'com.android.support:support-v13:25.3.1'
     compile 'com.afollestad.material-dialogs:core:0.9.0.2'
-    compile 'com.lb:materialdesigndialog:1.0.0'
-    compile 'com.github.promeg:tinypinyin:1.0.0'
     compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
     compile 'fm.jiecao:jiecaovideoplayer:5.5.4'
+    compile 'cn.jzvd:jiaozivideoplayer:6.0.2'
+    //OKGO
+    compile 'com.lzy.net:okserver:2.0.5'
+    compile 'com.lzy.net:okgo:3.0.4'
 
     testCompile 'junit:junit:4.12'
-    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
+
 }

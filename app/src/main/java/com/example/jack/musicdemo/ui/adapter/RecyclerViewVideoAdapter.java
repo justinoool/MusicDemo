@@ -18,8 +18,10 @@ import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
+import cn.jzvd.JZVideoPlayer;
+import cn.jzvd.JZVideoPlayerStandard;
+
+
 
 public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewVideoAdapter.MyViewHolder> {
 
@@ -50,15 +52,15 @@ public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewV
         DynamicInfo.BodyBean.DetailBean resultbean = result.get(position);
         try {
             String mp4 = URLDecoder.decode(resultbean.getMp4Url(), "utf-8");
-            holder.jcVideoPlayer.setUp(mp4,JCVideoPlayer.SCREEN_LAYOUT_LIST);
-            holder.jcVideoPlayer.thumbImageView.getAdjustViewBounds();
-            holder.jcVideoPlayer.backButton.setVisibility(View.GONE);
-            holder.jcVideoPlayer.thumbImageView.setImageResource(R.drawable.a8p);
+            holder.jzVideoPlayer.setUp(mp4, JZVideoPlayer.SCREEN_LAYOUT_LIST);
+            holder.jzVideoPlayer.thumbImageView.getAdjustViewBounds();
+            holder.jzVideoPlayer.backButton.setVisibility(View.GONE);
+            holder.jzVideoPlayer.thumbImageView.setImageResource(R.drawable.a8p);
             String url = URLDecoder.decode(resultbean.getUrl(), "utf-8");
-            GlideUtils.with(holder.jcVideoPlayer.getContext(),url,R.drawable.a8p
-                    ,holder.jcVideoPlayer.thumbImageView);
+            GlideUtils.with(holder.jzVideoPlayer.getContext(),url,R.drawable.a8p
+                    ,holder.jzVideoPlayer.thumbImageView);
             String photo = URLDecoder.decode(resultbean.getPhoto(), "utf-8");
-            GlideUtils.withRoundImage(holder.jcVideoPlayer.getContext(),photo,holder.up_avatar);
+            GlideUtils.withRoundImage(holder.jzVideoPlayer.getContext(),photo,holder.up_avatar);
             String Nickname = URLDecoder.decode(resultbean.getNickname(),"utf-8");
             String Title = URLDecoder.decode(resultbean.getTitle(),"utf-8");
             holder.up_user.setText(Nickname);
@@ -77,7 +79,7 @@ public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewV
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        JCVideoPlayerStandard jcVideoPlayer;
+       JZVideoPlayerStandard jzVideoPlayer;
         ImageView up_avatar;
         TextView up_user;
         TextView up_decs;
@@ -85,7 +87,7 @@ public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewV
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            jcVideoPlayer = (JCVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
+            jzVideoPlayer = (JZVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
             up_avatar = (ImageView) itemView.findViewById(R.id.up_avtar);
             up_user = (TextView) itemView.findViewById(R.id.up_user);
             up_decs = (TextView) itemView.findViewById(R.id.up_decs);

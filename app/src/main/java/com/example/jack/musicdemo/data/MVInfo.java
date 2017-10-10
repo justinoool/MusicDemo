@@ -12,22 +12,22 @@ import java.util.List;
 
 public class MVInfo {
 
-    @Override
-    public String toString() {
-        return "MVInfo{" +
-                "error_code=" + error_code +
-                ", result=" + result +
-                '}';
-    }
 
     /**
      * error_code : 22000
-     * result : {"video_info":{"video_id":"107056506","mv_id":"107056505","provider":"12","sourcepath":null,"thumbnail":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","del_status":"0","distribution":"0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000"},"files":{"31":{"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600","aspect_ratio":"16:9"}},"min_definition":"31","max_definition":"31","mv_info":{"mv_id":"107056505","all_artist_id":"88","title":"你还要我怎样","aliastitle":"你还要我怎样","subtitle":"官方版","play_nums":"592459","publishtime":"2013-12-16 09:06:13","del_status":"0","artist_list":[{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}],"artist_id":"88","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","artist":"薛之谦","provider":"12"},"share_url":"http://music.baidu.com/cms/webview/sharevideo?video_id=107056505"}
+     * result : {"video_info":{"video_id":"107056506","mv_id":"107056505","provider":"12","sourcepath":null,"thumbnail":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","del_status":"0","distribution":"0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000"},"files":{"31":{"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600"}},"min_definition":"31","max_definition":"31","mv_info":{"mv_id":"107056505","all_artist_id":"88","title":"你还要我怎样","aliastitle":"你还要我怎样","subtitle":"官方版","play_nums":"397591","publishtime":"1970-01-01","del_status":"0","artist_list":[{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}],"artist_id":"88","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","artist":"薛之谦","provider":"12"},"share_url":"http://music.baidu.com/cms/webview/sharevideo?video_id=107056505"}
      */
 
-
-
     private int error_code;
+    /**
+     * video_info : {"video_id":"107056506","mv_id":"107056505","provider":"12","sourcepath":null,"thumbnail":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","del_status":"0","distribution":"0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000"}
+     * files : {"31":{"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600"}}
+     * min_definition : 31
+     * max_definition : 31
+     * mv_info : {"mv_id":"107056505","all_artist_id":"88","title":"你还要我怎样","aliastitle":"你还要我怎样","subtitle":"官方版","play_nums":"397591","publishtime":"1970-01-01","del_status":"0","artist_list":[{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}],"artist_id":"88","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","artist":"薛之谦","provider":"12"}
+     * share_url : http://music.baidu.com/cms/webview/sharevideo?video_id=107056505
+     */
+
     private ResultBean result;
 
     public int getError_code() {
@@ -48,18 +48,41 @@ public class MVInfo {
 
     public static class ResultBean {
         /**
-         * video_info : {"video_id":"107056506","mv_id":"107056505","provider":"12","sourcepath":null,"thumbnail":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","del_status":"0","distribution":"0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000"}
-         * files : {"31":{"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600","aspect_ratio":"16:9"}}
-         * min_definition : 31
-         * max_definition : 31
-         * mv_info : {"mv_id":"107056505","all_artist_id":"88","title":"你还要我怎样","aliastitle":"你还要我怎样","subtitle":"官方版","play_nums":"592459","publishtime":"2013-12-16 09:06:13","del_status":"0","artist_list":[{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}],"artist_id":"88","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","artist":"薛之谦","provider":"12"}
-         * share_url : http://music.baidu.com/cms/webview/sharevideo?video_id=107056505
+         * video_id : 107056506
+         * mv_id : 107056505
+         * provider : 12
+         * sourcepath : null
+         * thumbnail : http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90
+         * thumbnail2 : http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
+         * del_status : 0
+         * distribution : 0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000
          */
 
         private VideoInfoBean video_info;
+        /**
+         * 31 : {"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600"}
+         */
+
         private FilesBean files;
         private String min_definition;
         private String max_definition;
+        /**
+         * mv_id : 107056505
+         * all_artist_id : 88
+         * title : 你还要我怎样
+         * aliastitle : 你还要我怎样
+         * subtitle : 官方版
+         * play_nums : 397591
+         * publishtime : 1970-01-01
+         * del_status : 0
+         * artist_list : [{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}]
+         * artist_id : 88
+         * thumbnail : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90
+         * thumbnail2 : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
+         * artist : 薛之谦
+         * provider : 12
+         */
+
         private MvInfoBean mv_info;
         private String share_url;
 
@@ -112,17 +135,6 @@ public class MVInfo {
         }
 
         public static class VideoInfoBean {
-            /**
-             * video_id : 107056506
-             * mv_id : 107056505
-             * provider : 12
-             * sourcepath : null
-             * thumbnail : http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90
-             * thumbnail2 : http://qukufile2.qianqian.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
-             * del_status : 0
-             * distribution : 0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000
-             */
-
             private String video_id;
             private String mv_id;
             private String provider;
@@ -199,34 +211,29 @@ public class MVInfo {
 
         public static class FilesBean {
             /**
-             * 31 : {"video_file_id":"107056568","video_id":"107056506","definition":"31","file_link":"http://www.yinyuetai.com/mv/video-url/834600","file_format":"","file_extension":"mp4","file_duration":"309","file_size":"0","source_path":"http://www.yinyuetai.com/mv/video-url/834600","aspect_ratio":"16:9"}
+             * video_file_id : 107056568
+             * video_id : 107056506
+             * definition : 31
+             * file_link : http://www.yinyuetai.com/mv/video-url/834600
+             * file_format :
+             * file_extension : mp4
+             * file_duration : 309
+             * file_size : 0
+             * source_path : http://www.yinyuetai.com/mv/video-url/834600
              */
 
             @SerializedName("31")
-            private _$31Bean _$31;
+            private FilesInfoBean value31;
 
-            public _$31Bean get_$31() {
-                return _$31;
+            public FilesInfoBean getValue31() {
+                return value31;
             }
 
-            public void set_$31(_$31Bean _$31) {
-                this._$31 = _$31;
+            public void setValue31(FilesInfoBean value31) {
+                this.value31 = value31;
             }
 
-            public static class _$31Bean {
-                /**
-                 * video_file_id : 107056568
-                 * video_id : 107056506
-                 * definition : 31
-                 * file_link : http://www.yinyuetai.com/mv/video-url/834600
-                 * file_format :
-                 * file_extension : mp4
-                 * file_duration : 309
-                 * file_size : 0
-                 * source_path : http://www.yinyuetai.com/mv/video-url/834600
-                 * aspect_ratio : 16:9
-                 */
-
+            public static class FilesInfoBean {
                 private String video_file_id;
                 private String video_id;
                 private String definition;
@@ -236,7 +243,6 @@ public class MVInfo {
                 private String file_duration;
                 private String file_size;
                 private String source_path;
-                private String aspect_ratio;
 
                 public String getVideo_file_id() {
                     return video_file_id;
@@ -309,35 +315,10 @@ public class MVInfo {
                 public void setSource_path(String source_path) {
                     this.source_path = source_path;
                 }
-
-                public String getAspect_ratio() {
-                    return aspect_ratio;
-                }
-
-                public void setAspect_ratio(String aspect_ratio) {
-                    this.aspect_ratio = aspect_ratio;
-                }
             }
         }
 
         public static class MvInfoBean {
-            /**
-             * mv_id : 107056505
-             * all_artist_id : 88
-             * title : 你还要我怎样
-             * aliastitle : 你还要我怎样
-             * subtitle : 官方版
-             * play_nums : 592459
-             * publishtime : 2013-12-16 09:06:13
-             * del_status : 0
-             * artist_list : [{"artist_id":"88","ting_uid":"2517","artist_name":"薛之谦","artist_480_800":"http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg","artist_640_1136":"http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg","avatar_small":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48","avatar_mini":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20","avatar_s180":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180","avatar_s300":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300","avatar_s500":"http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500","del_status":"0"}]
-             * artist_id : 88
-             * thumbnail : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg@s_0,w_160,h_90
-             * thumbnail2 : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
-             * artist : 薛之谦
-             * provider : 12
-             */
-
             private String mv_id;
             private String all_artist_id;
             private String title;
@@ -351,6 +332,20 @@ public class MVInfo {
             private String thumbnail2;
             private String artist;
             private String provider;
+            /**
+             * artist_id : 88
+             * ting_uid : 2517
+             * artist_name : 薛之谦
+             * artist_480_800 : http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg
+             * artist_640_1136 : http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg
+             * avatar_small : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48
+             * avatar_mini : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20
+             * avatar_s180 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180
+             * avatar_s300 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300
+             * avatar_s500 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500
+             * del_status : 0
+             */
+
             private List<ArtistListBean> artist_list;
 
             public String getMv_id() {
@@ -466,20 +461,6 @@ public class MVInfo {
             }
 
             public static class ArtistListBean {
-                /**
-                 * artist_id : 88
-                 * ting_uid : 2517
-                 * artist_name : 薛之谦
-                 * artist_480_800 : http://musicdata.baidu.com/data2/pic/105447793/105447793.jpg
-                 * artist_640_1136 : http://musicdata.baidu.com/data2/pic/105447799/105447799.jpg
-                 * avatar_small : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_48
-                 * avatar_mini : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_20
-                 * avatar_s180 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_180
-                 * avatar_s300 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_300
-                 * avatar_s500 : http://musicdata.baidu.com/data2/pic/246669444/246669444.jpg@s_0,w_500
-                 * del_status : 0
-                 */
-
                 private String artist_id;
                 private String ting_uid;
                 private String artist_name;

@@ -27,6 +27,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+
 public class LastFmClient {
 
     public static final String BASE_API_URL = "http://ws.audioscrobbler.com/2.0";

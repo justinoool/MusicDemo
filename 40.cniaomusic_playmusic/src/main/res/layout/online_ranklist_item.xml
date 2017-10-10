@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ranklist_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="127.0dip"
+        android:background="@drawable/bg_item_default"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/ranklist_item_icon_layout"
+            android:layout_width="97.0dip"
+            android:layout_height="97.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dip"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ranklist_item_icon"
+                android:layout_width="97.0dip"
+                android:layout_height="97.0dip"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@null"/>
+
+            <ImageView
+                android:id="@+id/ranklist_item_play_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="4.0dip"
+                android:layout_marginRight="4.0dip"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/bt_play"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ranklist_item_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="9.0dip"
+            android:src="@drawable/btn_ic_songlist_detail"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="103.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ranklist_item_enter"
+            android:layout_toRightOf="@+id/ranklist_item_icon_layout"
+            android:gravity="center|left|top"
+            android:paddingLeft="11.0dip"
+            android:paddingRight="11.0dip">
+
+            <TextView
+                android:id="@+id/ranklist_item_title"
+                style="@style/TextDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="top"
+                android:paddingTop="0.0dip"
+                android:singleLine="true"
+                android:text="榜单"
+                android:textSize="15.0dip"/>
+
+            <TextView
+                android:id="@+id/ranklist_item_songlist_top4_title_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ranklist_item_title"
+                android:layout_marginTop="8.0dip"
+                android:drawableLeft="@drawable/img_top_number_1"
+                android:drawablePadding="2.0dip"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="..."
+                android:textColor="@color/sk_color_838383"
+                android:textSize="11.0dip"/>
+
+            <TextView
+                android:id="@+id/ranklist_item_songlist_top4_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ranklist_item_songlist_top4_title_0"
+                android:layout_marginTop="4.0dip"
+                android:drawableLeft="@drawable/img_top_number_2"
+                android:drawablePadding="2.0dip"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="..."
+                android:textColor="@color/sk_color_838383"
+                android:textSize="11.0dip"/>
+
+            <TextView
+                android:id="@+id/ranklist_item_songlist_top4_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ranklist_item_songlist_top4_title_1"
+                android:layout_marginTop="4.0dip"
+                android:drawableLeft="@drawable/img_top_number_3"
+                android:drawablePadding="2.0dip"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="..."
+                android:textColor="@color/sk_color_838383"
+                android:textSize="11.0dip"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/DividinglineHasMargin"
+        android:background="@color/sk_color_dividing_line"/>
+</LinearLayout>

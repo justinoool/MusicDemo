@@ -29,8 +29,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
-import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+
 import com.example.jack.musicdemo.BaseActivity;
 import com.example.jack.musicdemo.R;
 import com.example.jack.musicdemo.ui.adapter.MenuItemAdapter;

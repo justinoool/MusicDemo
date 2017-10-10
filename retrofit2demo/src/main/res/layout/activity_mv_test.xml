@@ -9,7 +9,7 @@
         android:id="@+id/bt_json"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="异步请求" />
+        android:text="请求" />
 
     <ScrollView
         android:layout_width="match_parent"

@@ -18,7 +18,6 @@ import com.example.jack.musicdemo.db.CollectionManager;
 import com.example.jack.musicdemo.db.SongManager;
 import com.example.jack.musicdemo.model.CollectionPlayIView;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -29,6 +28,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+
 
 /**
  * @desciption: 收藏夹播放页面业务逻辑处理

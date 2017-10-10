@@ -30,6 +30,9 @@ import butterknife.ButterKnife;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import retrofit2.Retrofit;
 
+import static android.R.attr.path;
+import static com.cainiao5.cainiaomusic.R.id.body;
+
 /**
  */
 public class DynamicFragment extends Fragment {

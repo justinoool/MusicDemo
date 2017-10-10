@@ -1,5 +1,7 @@
 package com.example.jack.musicdemo.data;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -8,22 +10,24 @@ import java.util.List;
  * MVListInfo
  */
 
-public class MVListInfo {
+public  class MVListInfo {
 
     /**
      * error_code : 22000
-     * result : {"total":804242,"havemore":"1","mv_list":[{"aliastitle":"你还要我怎样","all_artist_id":"88","artist":"薛之谦","artist_id":"88","del_status":"0","mv_id":"107056505","play_nums":"592744","provider":"12","publishtime":"2013-12-16 09:06:13","subtitle":"官方版","title":"你还要我怎样","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg"},{"aliastitle":"安和桥","all_artist_id":"44805274","artist":"宋冬野","artist_id":"44805274","del_status":"0","mv_id":"112633517","play_nums":"103453","provider":"12","publishtime":"2014-01-29 14:38:25","subtitle":"","title":"安和桥","thumbnail":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg"},{"aliastitle":"轻轻的告诉你","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"125427043","play_nums":"70054","provider":"12","publishtime":"2014-12-05 16:01:08","subtitle":"","title":"轻轻的告诉你","thumbnail":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg"},{"aliastitle":"后来","all_artist_id":"74","artist":"刘若英","artist_id":"74","del_status":"0","mv_id":"98630196","play_nums":"89901","provider":"12","publishtime":"2013-10-30 19:43:59","subtitle":"猪哥会社 现场版","title":"后来","thumbnail":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg"},{"aliastitle":"","all_artist_id":"1839","artist":"阿宝","artist_id":"1839","del_status":"0","mv_id":"261080701","play_nums":"21347","provider":"12","publishtime":"2016-01-06 03:20:29","subtitle":"广东跨年 现场版 15/12/31","title":"爱你在心口难开","thumbnail":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg"},{"aliastitle":"真的爱你","all_artist_id":"130","artist":"Beyond","artist_id":"130","del_status":"0","mv_id":"116279020","play_nums":"190355","provider":"12","publishtime":"2014-03-11 12:16:16","subtitle":"十大中文金曲 现场版","title":"真的爱你","thumbnail":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg"},{"aliastitle":"南方姑娘","all_artist_id":"13874366","artist":"赵雷","artist_id":"13874366","del_status":"0","mv_id":"118336764","play_nums":"33256","provider":"12","publishtime":"2014-04-22 16:14:06","subtitle":"","title":"南方姑娘","thumbnail":"http://musicdata.baidu.com/data2/pic/7b90b342e6ebd0c5f721ff5be731c90d/323971824/323971824.png","thumbnail2":"http://musicdata.baidu.com/data2/pic/7b90b342e6ebd0c5f721ff5be731c90d/323971824/323971824.png"},{"aliastitle":"男儿当自强","all_artist_id":"311","artist":"林子祥","artist_id":"311","del_status":"0","mv_id":"89211221","play_nums":"112719","provider":"12","publishtime":"2013-10-14 05:59:07","subtitle":"香港同胞庆祝中华人民共和国成立六十四周年文艺晚会 现场版 13/10/02","title":"男儿当自强","thumbnail":"http://musicdata.baidu.com/data2/pic/94cbb922b81817a0def5a74caa756f1b/333508211/333508211.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/94cbb922b81817a0def5a74caa756f1b/333508211/333508211.jpg"},{"aliastitle":"","all_artist_id":"1864","artist":"降央卓玛","artist_id":"1864","del_status":"0","mv_id":"264734415","play_nums":"6589","provider":"12","publishtime":"2016-04-15 12:59:21","subtitle":"放歌中国 现场版","title":"西海情歌","thumbnail":"http://musicdata.baidu.com/data2/pic/0a0e009333df5b1571f384cbd20de70b/320156517/320156517.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/0a0e009333df5b1571f384cbd20de70b/320156517/320156517.jpg"},{"aliastitle":"Dangerous","all_artist_id":"821","artist":"Michael Jackson","artist_id":"821","del_status":"0","mv_id":"89477261","play_nums":"59881","provider":"12","publishtime":"2013-10-15 16:07:59","subtitle":"(Buenos Aires) 现场版 93/10/12","title":"Dangerous","thumbnail":"http://musicdata.baidu.com/data2/music/904e39fb372321a4b7f6b56ac948f628/89477285/89477285.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/904e39fb372321a4b7f6b56ac948f628/89477285/89477285.jpeg"},{"aliastitle":"","all_artist_id":"50476","artist":"云飞","artist_id":"50476","del_status":"0","mv_id":"272024062","play_nums":"16609","provider":"12","publishtime":"2016-09-29 17:00:00","subtitle":"- 马兰花开 现场版","title":"父亲的草原母亲的河","thumbnail":"http://musicdata.baidu.com/data2/pic/0fedb0bf485c9c42bbe315a79958d099/277216210/277216210.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/0fedb0bf485c9c42bbe315a79958d099/277216210/277216210.jpg"},{"aliastitle":"倩女幽魂","all_artist_id":"117","artist":"张国荣","artist_id":"117","del_status":"0","mv_id":"86785794","play_nums":"173030","provider":"12","publishtime":"2013-09-22 17:49:37","subtitle":"国语版 中文字幕","title":"倩女幽魂","thumbnail":"http://musicdata.baidu.com/data2/music/ce188ffc2f83ede9d94ffdacd51ab0b5/86785819/86785819.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/ce188ffc2f83ede9d94ffdacd51ab0b5/86785819/86785819.jpeg"},{"aliastitle":"等你一万年","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"119025286","play_nums":"36715","provider":"12","publishtime":"2014-04-29 00:39:47","subtitle":"美好的时光 广州演唱会 现场版 14/04/19","title":"等你一万年","thumbnail":"http://musicdata.baidu.com/data2/music/bbea1a40bb22830562982dbb154f257e/119025299/119025299.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/bbea1a40bb22830562982dbb154f257e/119025299/119025299.jpeg"},{"aliastitle":"撕夜","all_artist_id":"160","artist":"阿杜","artist_id":"160","del_status":"0","mv_id":"123041444","play_nums":"14939","provider":"12","publishtime":"2014-09-04 14:45:13","subtitle":"MTV版","title":"撕夜","thumbnail":"http://musicdata.baidu.com/data2/pic/66275ed2ad6df0da858e931b2672ef07/333139643/333139643.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/66275ed2ad6df0da858e931b2672ef07/333139643/333139643.jpg"},{"aliastitle":"繁星点点","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"86916628","play_nums":"71532","provider":"12","publishtime":"2013-09-24 23:56:21","subtitle":"","title":"繁星点点","thumbnail":"http://musicdata.baidu.com/data2/pic/98985623/98985623.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/pic/98985623/98985623.jpeg"},{"aliastitle":"以后的以后","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"109797063","play_nums":"80656","provider":"12","publishtime":"2014-01-16 14:59:50","subtitle":"","title":"以后的以后","thumbnail":"http://musicdata.baidu.com/data2/music/7e2699fac12a7261ed9385768951c693/109797077/109797077.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/7e2699fac12a7261ed9385768951c693/109797077/109797077.jpeg"},{"aliastitle":"爱江山更爱美人 一剪梅","all_artist_id":"1864","artist":"降央卓玛","artist_id":"1864","del_status":"0","mv_id":"121532080","play_nums":"104732","provider":"12","publishtime":"2014-07-17 03:58:05","subtitle":"现场版","title":"爱江山更爱美人 一剪梅","thumbnail":"http://musicdata.baidu.com/data2/music/6d0fc891f52a6af0c814d7a57a927f13/121532092/121532092.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/6d0fc891f52a6af0c814d7a57a927f13/121532092/121532092.jpg"},{"aliastitle":"爱囚","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"117183300","play_nums":"28229","provider":"12","publishtime":"2014-04-11 04:29:39","subtitle":"","title":"爱囚","thumbnail":"http://musicdata.baidu.com/data2/music/ff313e74740b878016b3974c48c713ea/117183311/117183311.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/ff313e74740b878016b3974c48c713ea/117183311/117183311.jpeg"},{"aliastitle":"","all_artist_id":"18632138","artist":"王二妮","artist_id":"18632138","del_status":"0","mv_id":"261697443","play_nums":"13890","provider":"12","publishtime":"2016-01-19 03:20:43","subtitle":"饭制版","title":"一对对鸳鸯水上漂","thumbnail":"http://musicdata.baidu.com/data2/pic/922e242bdcf97804375cb3f3f02a9591/261697548/261697548.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/922e242bdcf97804375cb3f3f02a9591/261697548/261697548.jpg"}]}
+     * result : {"total":720000,"havemore":"1","mv_list":[{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"63370002","play_nums":"640137","provider":"12","publishtime":"2013-06-25 05:30:05","subtitle":"字幕版","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg"},{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"62735861","play_nums":"246475","provider":"12","publishtime":"2013-06-24 23:27:15","subtitle":"","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/d138958317ca4fbe12e88257cc546347/62735867/62735867.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/d138958317ca4fbe12e88257cc546347/62735867/62735867.jpg"},{"aliastitle":"你还要我怎样","all_artist_id":"88","artist":"薛之谦","artist_id":"88","del_status":"0","mv_id":"107056505","play_nums":"704017","provider":"12","publishtime":"2013-12-16 09:06:13","subtitle":"官方版","title":"你还要我怎样","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg"},{"aliastitle":"安和桥","all_artist_id":"44805274","artist":"宋冬野","artist_id":"44805274","del_status":"0","mv_id":"112633517","play_nums":"131213","provider":"12","publishtime":"2014-01-29 14:38:25","subtitle":"","title":"安和桥","thumbnail":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg"},{"aliastitle":"北国之春","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"61917326","play_nums":"970519","provider":"12","publishtime":"2013-06-24 14:03:47","subtitle":"现场版","title":"北国之春","thumbnail":"http://musicdata.baidu.com/data2/music/bb0be659f41875be74eaa9d907ed4ecc/93147308/93147308.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/bb0be659f41875be74eaa9d907ed4ecc/93147308/93147308.jpeg"},{"aliastitle":"他一定很爱你","all_artist_id":"160","artist":"阿杜","artist_id":"160","del_status":"0","mv_id":"61215060","play_nums":"126049","provider":"12","publishtime":"2013-06-24 08:20:17","subtitle":"<男才女貌>主题曲 电视剧版","title":"他一定很爱你","thumbnail":"http://musicdata.baidu.com/data2/pic/38f7ca49ee2241a171be6a8555ecee36/333143353/333143353.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/38f7ca49ee2241a171be6a8555ecee36/333143353/333143353.jpg"},{"aliastitle":"大中国","all_artist_id":"356","artist":"高枫","artist_id":"356","del_status":"0","mv_id":"62729142","play_nums":"98805","provider":"12","publishtime":"2013-06-24 23:23:30","subtitle":"","title":"大中国","thumbnail":"http://musicdata.baidu.com/data2/music/3802d822e6f4e98ff9407af2fbf4c3b0/62729168/62729168.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/3802d822e6f4e98ff9407af2fbf4c3b0/62729168/62729168.jpg"},{"aliastitle":"轻轻的告诉你","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"125427043","play_nums":"78845","provider":"12","publishtime":"2014-12-05 16:01:08","subtitle":"","title":"轻轻的告诉你","thumbnail":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg"},{"aliastitle":"后来","all_artist_id":"74","artist":"刘若英","artist_id":"74","del_status":"0","mv_id":"98630196","play_nums":"103486","provider":"12","publishtime":"2013-10-30 19:43:59","subtitle":"猪哥会社 现场版","title":"后来","thumbnail":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg"},{"aliastitle":"甜蜜蜜","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"63165884","play_nums":"397579","provider":"12","publishtime":"2013-06-25 03:35:46","subtitle":"<但愿人长久>15周年纪念集 现场版","title":"甜蜜蜜","thumbnail":"http://musicdata.baidu.com/data2/music/4bfc97ca21975f267d98720e065023de/63165905/63165905.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/4bfc97ca21975f267d98720e065023de/63165905/63165905.jpg"},{"aliastitle":"万水千山总是情","all_artist_id":"326","artist":"汪明荃","artist_id":"326","del_status":"0","mv_id":"60732136","play_nums":"114552","provider":"12","publishtime":"2013-06-24 04:33:08","subtitle":"","title":"万水千山总是情","thumbnail":"http://musicdata.baidu.com/data2/pic/92882878/92882878.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/92882878/92882878.jpg"},{"aliastitle":"","all_artist_id":"1839","artist":"阿宝","artist_id":"1839","del_status":"0","mv_id":"261080701","play_nums":"26606","provider":"12","publishtime":"2016-01-06 03:20:29","subtitle":"广东跨年 现场版 15/12/31","title":"爱你在心口难开","thumbnail":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg"},{"aliastitle":"甜蜜蜜","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"60382209","play_nums":"408957","provider":"12","publishtime":"2013-06-24 01:48:07","subtitle":"电视剧版","title":"甜蜜蜜","thumbnail":"http://musicdata.baidu.com/data2/music/03414884cc30baebf445ab25f9dc2ea6/60382232/60382232.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/03414884cc30baebf445ab25f9dc2ea6/60382232/60382232.jpg"},{"aliastitle":"Panama","all_artist_id":"60425915","artist":"Matteo","artist_id":"60425915","del_status":"0","mv_id":"99426552","play_nums":"3891","provider":"12","publishtime":"2013-11-02 10:13:05","subtitle":"","title":"Panama","thumbnail":"http://musicdata.baidu.com/data2/music/7e7abb15e4157de2c65498214a75728c/99426598/99426598.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/7e7abb15e4157de2c65498214a75728c/99426598/99426598.jpeg"},{"aliastitle":"女儿情","all_artist_id":"5686850,51991","artist":"影视","artist_id":"5686850","del_status":"0","mv_id":"62320423","play_nums":"29416","provider":"12","publishtime":"2013-06-24 17:28:19","subtitle":"电视剧<西游记>插曲","title":"女儿情","thumbnail":"http://musicdata.baidu.com/data2/pic/b2fc67eb32ca4c6a52927022ef91aac6/263862575/263862575.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b2fc67eb32ca4c6a52927022ef91aac6/263862575/263862575.jpg"},{"aliastitle":"我只在乎你","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"60293722","play_nums":"371894","provider":"12","publishtime":"2013-06-24 01:05:46","subtitle":"","title":"我只在乎你","thumbnail":"http://musicdata.baidu.com/data2/music/c6d9872aa3dddda410eb9a90e65bb988/60293737/60293737.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/c6d9872aa3dddda410eb9a90e65bb988/60293737/60293737.jpg"},{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"61350056","play_nums":"145271","provider":"12","publishtime":"2013-06-24 09:25:28","subtitle":"现场版","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/0185e1296692339cf1ca020fbfd67148/61350083/61350083.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/0185e1296692339cf1ca020fbfd67148/61350083/61350083.jpg"},{"aliastitle":"真的爱你","all_artist_id":"130","artist":"Beyond","artist_id":"130","del_status":"0","mv_id":"116279020","play_nums":"196275","provider":"12","publishtime":"2014-03-11 12:16:16","subtitle":"十大中文金曲 现场版","title":"真的爱你","thumbnail":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg"},{"aliastitle":"心会跟爱一起走","all_artist_id":"1449","artist":"郭峰","artist_id":"1449","del_status":"0","mv_id":"84754335","play_nums":"47047","provider":"12","publishtime":"2013-09-09 10:05:07","subtitle":"安徽卫视 黄金年代 现场版","title":"心会跟爱一起走","thumbnail":"http://musicdata.baidu.com/data2/pic/5b277d748ed974515d57541b9100b65e/324811823/324811823.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/pic/5b277d748ed974515d57541b9100b65e/324811823/324811823.jpeg"}]}
      */
 
-    private int error_code;
+    @SerializedName("error_code")
+    private int errorCode;
+    @SerializedName("result")
     private ResultBean result;
 
-    public int getError_code() {
-        return error_code;
+    public int getErrorCode() {
+        return errorCode;
     }
 
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
+    public void setErrorCode(int errorCode) {
+        this.errorCode = errorCode;
     }
 
     public ResultBean getResult() {
@@ -36,14 +40,17 @@ public class MVListInfo {
 
     public static class ResultBean {
         /**
-         * total : 804242
+         * total : 720000
          * havemore : 1
-         * mv_list : [{"aliastitle":"你还要我怎样","all_artist_id":"88","artist":"薛之谦","artist_id":"88","del_status":"0","mv_id":"107056505","play_nums":"592744","provider":"12","publishtime":"2013-12-16 09:06:13","subtitle":"官方版","title":"你还要我怎样","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg"},{"aliastitle":"安和桥","all_artist_id":"44805274","artist":"宋冬野","artist_id":"44805274","del_status":"0","mv_id":"112633517","play_nums":"103453","provider":"12","publishtime":"2014-01-29 14:38:25","subtitle":"","title":"安和桥","thumbnail":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg"},{"aliastitle":"轻轻的告诉你","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"125427043","play_nums":"70054","provider":"12","publishtime":"2014-12-05 16:01:08","subtitle":"","title":"轻轻的告诉你","thumbnail":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg"},{"aliastitle":"后来","all_artist_id":"74","artist":"刘若英","artist_id":"74","del_status":"0","mv_id":"98630196","play_nums":"89901","provider":"12","publishtime":"2013-10-30 19:43:59","subtitle":"猪哥会社 现场版","title":"后来","thumbnail":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg"},{"aliastitle":"","all_artist_id":"1839","artist":"阿宝","artist_id":"1839","del_status":"0","mv_id":"261080701","play_nums":"21347","provider":"12","publishtime":"2016-01-06 03:20:29","subtitle":"广东跨年 现场版 15/12/31","title":"爱你在心口难开","thumbnail":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg"},{"aliastitle":"真的爱你","all_artist_id":"130","artist":"Beyond","artist_id":"130","del_status":"0","mv_id":"116279020","play_nums":"190355","provider":"12","publishtime":"2014-03-11 12:16:16","subtitle":"十大中文金曲 现场版","title":"真的爱你","thumbnail":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg"},{"aliastitle":"南方姑娘","all_artist_id":"13874366","artist":"赵雷","artist_id":"13874366","del_status":"0","mv_id":"118336764","play_nums":"33256","provider":"12","publishtime":"2014-04-22 16:14:06","subtitle":"","title":"南方姑娘","thumbnail":"http://musicdata.baidu.com/data2/pic/7b90b342e6ebd0c5f721ff5be731c90d/323971824/323971824.png","thumbnail2":"http://musicdata.baidu.com/data2/pic/7b90b342e6ebd0c5f721ff5be731c90d/323971824/323971824.png"},{"aliastitle":"男儿当自强","all_artist_id":"311","artist":"林子祥","artist_id":"311","del_status":"0","mv_id":"89211221","play_nums":"112719","provider":"12","publishtime":"2013-10-14 05:59:07","subtitle":"香港同胞庆祝中华人民共和国成立六十四周年文艺晚会 现场版 13/10/02","title":"男儿当自强","thumbnail":"http://musicdata.baidu.com/data2/pic/94cbb922b81817a0def5a74caa756f1b/333508211/333508211.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/94cbb922b81817a0def5a74caa756f1b/333508211/333508211.jpg"},{"aliastitle":"","all_artist_id":"1864","artist":"降央卓玛","artist_id":"1864","del_status":"0","mv_id":"264734415","play_nums":"6589","provider":"12","publishtime":"2016-04-15 12:59:21","subtitle":"放歌中国 现场版","title":"西海情歌","thumbnail":"http://musicdata.baidu.com/data2/pic/0a0e009333df5b1571f384cbd20de70b/320156517/320156517.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/0a0e009333df5b1571f384cbd20de70b/320156517/320156517.jpg"},{"aliastitle":"Dangerous","all_artist_id":"821","artist":"Michael Jackson","artist_id":"821","del_status":"0","mv_id":"89477261","play_nums":"59881","provider":"12","publishtime":"2013-10-15 16:07:59","subtitle":"(Buenos Aires) 现场版 93/10/12","title":"Dangerous","thumbnail":"http://musicdata.baidu.com/data2/music/904e39fb372321a4b7f6b56ac948f628/89477285/89477285.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/904e39fb372321a4b7f6b56ac948f628/89477285/89477285.jpeg"},{"aliastitle":"","all_artist_id":"50476","artist":"云飞","artist_id":"50476","del_status":"0","mv_id":"272024062","play_nums":"16609","provider":"12","publishtime":"2016-09-29 17:00:00","subtitle":"- 马兰花开 现场版","title":"父亲的草原母亲的河","thumbnail":"http://musicdata.baidu.com/data2/pic/0fedb0bf485c9c42bbe315a79958d099/277216210/277216210.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/0fedb0bf485c9c42bbe315a79958d099/277216210/277216210.jpg"},{"aliastitle":"倩女幽魂","all_artist_id":"117","artist":"张国荣","artist_id":"117","del_status":"0","mv_id":"86785794","play_nums":"173030","provider":"12","publishtime":"2013-09-22 17:49:37","subtitle":"国语版 中文字幕","title":"倩女幽魂","thumbnail":"http://musicdata.baidu.com/data2/music/ce188ffc2f83ede9d94ffdacd51ab0b5/86785819/86785819.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/ce188ffc2f83ede9d94ffdacd51ab0b5/86785819/86785819.jpeg"},{"aliastitle":"等你一万年","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"119025286","play_nums":"36715","provider":"12","publishtime":"2014-04-29 00:39:47","subtitle":"美好的时光 广州演唱会 现场版 14/04/19","title":"等你一万年","thumbnail":"http://musicdata.baidu.com/data2/music/bbea1a40bb22830562982dbb154f257e/119025299/119025299.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/bbea1a40bb22830562982dbb154f257e/119025299/119025299.jpeg"},{"aliastitle":"撕夜","all_artist_id":"160","artist":"阿杜","artist_id":"160","del_status":"0","mv_id":"123041444","play_nums":"14939","provider":"12","publishtime":"2014-09-04 14:45:13","subtitle":"MTV版","title":"撕夜","thumbnail":"http://musicdata.baidu.com/data2/pic/66275ed2ad6df0da858e931b2672ef07/333139643/333139643.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/66275ed2ad6df0da858e931b2672ef07/333139643/333139643.jpg"},{"aliastitle":"繁星点点","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"86916628","play_nums":"71532","provider":"12","publishtime":"2013-09-24 23:56:21","subtitle":"","title":"繁星点点","thumbnail":"http://musicdata.baidu.com/data2/pic/98985623/98985623.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/pic/98985623/98985623.jpeg"},{"aliastitle":"以后的以后","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"109797063","play_nums":"80656","provider":"12","publishtime":"2014-01-16 14:59:50","subtitle":"","title":"以后的以后","thumbnail":"http://musicdata.baidu.com/data2/music/7e2699fac12a7261ed9385768951c693/109797077/109797077.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/7e2699fac12a7261ed9385768951c693/109797077/109797077.jpeg"},{"aliastitle":"爱江山更爱美人 一剪梅","all_artist_id":"1864","artist":"降央卓玛","artist_id":"1864","del_status":"0","mv_id":"121532080","play_nums":"104732","provider":"12","publishtime":"2014-07-17 03:58:05","subtitle":"现场版","title":"爱江山更爱美人 一剪梅","thumbnail":"http://musicdata.baidu.com/data2/music/6d0fc891f52a6af0c814d7a57a927f13/121532092/121532092.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/6d0fc891f52a6af0c814d7a57a927f13/121532092/121532092.jpg"},{"aliastitle":"爱囚","all_artist_id":"30855741","artist":"庄心妍","artist_id":"30855741","del_status":"0","mv_id":"117183300","play_nums":"28229","provider":"12","publishtime":"2014-04-11 04:29:39","subtitle":"","title":"爱囚","thumbnail":"http://musicdata.baidu.com/data2/music/ff313e74740b878016b3974c48c713ea/117183311/117183311.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/ff313e74740b878016b3974c48c713ea/117183311/117183311.jpeg"},{"aliastitle":"","all_artist_id":"18632138","artist":"王二妮","artist_id":"18632138","del_status":"0","mv_id":"261697443","play_nums":"13890","provider":"12","publishtime":"2016-01-19 03:20:43","subtitle":"饭制版","title":"一对对鸳鸯水上漂","thumbnail":"http://musicdata.baidu.com/data2/pic/922e242bdcf97804375cb3f3f02a9591/261697548/261697548.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/922e242bdcf97804375cb3f3f02a9591/261697548/261697548.jpg"}]
+         * mv_list : [{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"63370002","play_nums":"640137","provider":"12","publishtime":"2013-06-25 05:30:05","subtitle":"字幕版","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg"},{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"62735861","play_nums":"246475","provider":"12","publishtime":"2013-06-24 23:27:15","subtitle":"","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/d138958317ca4fbe12e88257cc546347/62735867/62735867.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/d138958317ca4fbe12e88257cc546347/62735867/62735867.jpg"},{"aliastitle":"你还要我怎样","all_artist_id":"88","artist":"薛之谦","artist_id":"88","del_status":"0","mv_id":"107056505","play_nums":"704017","provider":"12","publishtime":"2013-12-16 09:06:13","subtitle":"官方版","title":"你还要我怎样","thumbnail":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg"},{"aliastitle":"安和桥","all_artist_id":"44805274","artist":"宋冬野","artist_id":"44805274","del_status":"0","mv_id":"112633517","play_nums":"131213","provider":"12","publishtime":"2014-01-29 14:38:25","subtitle":"","title":"安和桥","thumbnail":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c24b061fb60f3e208b3c294afe655d1a/261599462/261599462.jpg"},{"aliastitle":"北国之春","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"61917326","play_nums":"970519","provider":"12","publishtime":"2013-06-24 14:03:47","subtitle":"现场版","title":"北国之春","thumbnail":"http://musicdata.baidu.com/data2/music/bb0be659f41875be74eaa9d907ed4ecc/93147308/93147308.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/bb0be659f41875be74eaa9d907ed4ecc/93147308/93147308.jpeg"},{"aliastitle":"他一定很爱你","all_artist_id":"160","artist":"阿杜","artist_id":"160","del_status":"0","mv_id":"61215060","play_nums":"126049","provider":"12","publishtime":"2013-06-24 08:20:17","subtitle":"<男才女貌>主题曲 电视剧版","title":"他一定很爱你","thumbnail":"http://musicdata.baidu.com/data2/pic/38f7ca49ee2241a171be6a8555ecee36/333143353/333143353.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/38f7ca49ee2241a171be6a8555ecee36/333143353/333143353.jpg"},{"aliastitle":"大中国","all_artist_id":"356","artist":"高枫","artist_id":"356","del_status":"0","mv_id":"62729142","play_nums":"98805","provider":"12","publishtime":"2013-06-24 23:23:30","subtitle":"","title":"大中国","thumbnail":"http://musicdata.baidu.com/data2/music/3802d822e6f4e98ff9407af2fbf4c3b0/62729168/62729168.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/3802d822e6f4e98ff9407af2fbf4c3b0/62729168/62729168.jpg"},{"aliastitle":"轻轻的告诉你","all_artist_id":"999","artist":"杨钰莹","artist_id":"999","del_status":"0","mv_id":"125427043","play_nums":"78845","provider":"12","publishtime":"2014-12-05 16:01:08","subtitle":"","title":"轻轻的告诉你","thumbnail":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/c5cda929921bfdbad3c5c9380ac50fd2/327697249/327697249.jpg"},{"aliastitle":"后来","all_artist_id":"74","artist":"刘若英","artist_id":"74","del_status":"0","mv_id":"98630196","play_nums":"103486","provider":"12","publishtime":"2013-10-30 19:43:59","subtitle":"猪哥会社 现场版","title":"后来","thumbnail":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/968eac365b500d29cca4b5cc6e4aa35c/98630216/98630216.jpeg"},{"aliastitle":"甜蜜蜜","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"63165884","play_nums":"397579","provider":"12","publishtime":"2013-06-25 03:35:46","subtitle":"<但愿人长久>15周年纪念集 现场版","title":"甜蜜蜜","thumbnail":"http://musicdata.baidu.com/data2/music/4bfc97ca21975f267d98720e065023de/63165905/63165905.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/4bfc97ca21975f267d98720e065023de/63165905/63165905.jpg"},{"aliastitle":"万水千山总是情","all_artist_id":"326","artist":"汪明荃","artist_id":"326","del_status":"0","mv_id":"60732136","play_nums":"114552","provider":"12","publishtime":"2013-06-24 04:33:08","subtitle":"","title":"万水千山总是情","thumbnail":"http://musicdata.baidu.com/data2/pic/92882878/92882878.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/92882878/92882878.jpg"},{"aliastitle":"","all_artist_id":"1839","artist":"阿宝","artist_id":"1839","del_status":"0","mv_id":"261080701","play_nums":"26606","provider":"12","publishtime":"2016-01-06 03:20:29","subtitle":"广东跨年 现场版 15/12/31","title":"爱你在心口难开","thumbnail":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b9cf9f9fc305acfac61631ef2c6bdc7b/261080877/261080877.jpg"},{"aliastitle":"甜蜜蜜","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"60382209","play_nums":"408957","provider":"12","publishtime":"2013-06-24 01:48:07","subtitle":"电视剧版","title":"甜蜜蜜","thumbnail":"http://musicdata.baidu.com/data2/music/03414884cc30baebf445ab25f9dc2ea6/60382232/60382232.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/03414884cc30baebf445ab25f9dc2ea6/60382232/60382232.jpg"},{"aliastitle":"Panama","all_artist_id":"60425915","artist":"Matteo","artist_id":"60425915","del_status":"0","mv_id":"99426552","play_nums":"3891","provider":"12","publishtime":"2013-11-02 10:13:05","subtitle":"","title":"Panama","thumbnail":"http://musicdata.baidu.com/data2/music/7e7abb15e4157de2c65498214a75728c/99426598/99426598.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/7e7abb15e4157de2c65498214a75728c/99426598/99426598.jpeg"},{"aliastitle":"女儿情","all_artist_id":"5686850,51991","artist":"影视","artist_id":"5686850","del_status":"0","mv_id":"62320423","play_nums":"29416","provider":"12","publishtime":"2013-06-24 17:28:19","subtitle":"电视剧<西游记>插曲","title":"女儿情","thumbnail":"http://musicdata.baidu.com/data2/pic/b2fc67eb32ca4c6a52927022ef91aac6/263862575/263862575.jpg","thumbnail2":"http://musicdata.baidu.com/data2/pic/b2fc67eb32ca4c6a52927022ef91aac6/263862575/263862575.jpg"},{"aliastitle":"我只在乎你","all_artist_id":"116","artist":"邓丽君","artist_id":"116","del_status":"0","mv_id":"60293722","play_nums":"371894","provider":"12","publishtime":"2013-06-24 01:05:46","subtitle":"","title":"我只在乎你","thumbnail":"http://musicdata.baidu.com/data2/music/c6d9872aa3dddda410eb9a90e65bb988/60293737/60293737.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/c6d9872aa3dddda410eb9a90e65bb988/60293737/60293737.jpg"},{"aliastitle":"无情的雨无情的你","all_artist_id":"163","artist":"齐秦","artist_id":"163","del_status":"0","mv_id":"61350056","play_nums":"145271","provider":"12","publishtime":"2013-06-24 09:25:28","subtitle":"现场版","title":"无情的雨无情的你","thumbnail":"http://musicdata.baidu.com/data2/music/0185e1296692339cf1ca020fbfd67148/61350083/61350083.jpg","thumbnail2":"http://musicdata.baidu.com/data2/music/0185e1296692339cf1ca020fbfd67148/61350083/61350083.jpg"},{"aliastitle":"真的爱你","all_artist_id":"130","artist":"Beyond","artist_id":"130","del_status":"0","mv_id":"116279020","play_nums":"196275","provider":"12","publishtime":"2014-03-11 12:16:16","subtitle":"十大中文金曲 现场版","title":"真的爱你","thumbnail":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/music/695c359e67145e12e493b5b5a2317515/116279031/116279031.jpeg"},{"aliastitle":"心会跟爱一起走","all_artist_id":"1449","artist":"郭峰","artist_id":"1449","del_status":"0","mv_id":"84754335","play_nums":"47047","provider":"12","publishtime":"2013-09-09 10:05:07","subtitle":"安徽卫视 黄金年代 现场版","title":"心会跟爱一起走","thumbnail":"http://musicdata.baidu.com/data2/pic/5b277d748ed974515d57541b9100b65e/324811823/324811823.jpeg","thumbnail2":"http://musicdata.baidu.com/data2/pic/5b277d748ed974515d57541b9100b65e/324811823/324811823.jpeg"}]
          */
 
+        @SerializedName("total")
         private int total;
+        @SerializedName("havemore")
         private String havemore;
-        private List<MvListBean> mv_list;
+        @SerializedName("mv_list")
+        private List<MvListBean> mvList;
 
         public int getTotal() {
             return total;
@@ -61,43 +68,56 @@ public class MVListInfo {
             this.havemore = havemore;
         }
 
-        public List<MvListBean> getMv_list() {
-            return mv_list;
+        public List<MvListBean> getMvList() {
+            return mvList;
         }
 
-        public void setMv_list(List<MvListBean> mv_list) {
-            this.mv_list = mv_list;
+        public void setMvList(List<MvListBean> mvList) {
+            this.mvList = mvList;
         }
 
         public static class MvListBean {
             /**
-             * aliastitle : 你还要我怎样
-             * all_artist_id : 88
-             * artist : 薛之谦
-             * artist_id : 88
+             * aliastitle : 无情的雨无情的你
+             * all_artist_id : 163
+             * artist : 齐秦
+             * artist_id : 163
              * del_status : 0
-             * mv_id : 107056505
-             * play_nums : 592744
+             * mv_id : 63370002
+             * play_nums : 640137
              * provider : 12
-             * publishtime : 2013-12-16 09:06:13
-             * subtitle : 官方版
-             * title : 你还要我怎样
-             * thumbnail : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
-             * thumbnail2 : http://musicdata.baidu.com/data2/music/b559ec89fb89166f3992fdbabd8e5d01/107056519/107056519.jpeg
+             * publishtime : 2013-06-25 05:30:05
+             * subtitle : 字幕版
+             * title : 无情的雨无情的你
+             * thumbnail : http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg
+             * thumbnail2 : http://musicdata.baidu.com/data2/music/c302fce3d801924cfd7ec2ff53972891/63370021/63370021.jpg
              */
 
+            @SerializedName("aliastitle")
             private String aliastitle;
-            private String all_artist_id;
+            @SerializedName("all_artist_id")
+            private String allArtistId;
+            @SerializedName("artist")
             private String artist;
-            private String artist_id;
-            private String del_status;
-            private String mv_id;
-            private String play_nums;
+            @SerializedName("artist_id")
+            private String artistId;
+            @SerializedName("del_status")
+            private String delStatus;
+            @SerializedName("mv_id")
+            private String mvId;
+            @SerializedName("play_nums")
+            private String playNums;
+            @SerializedName("provider")
             private String provider;
+            @SerializedName("publishtime")
             private String publishtime;
+            @SerializedName("subtitle")
             private String subtitle;
+            @SerializedName("title")
             private String title;
+            @SerializedName("thumbnail")
             private String thumbnail;
+            @SerializedName("thumbnail2")
             private String thumbnail2;
 
             public String getAliastitle() {
@@ -108,12 +128,12 @@ public class MVListInfo {
                 this.aliastitle = aliastitle;
             }
 
-            public String getAll_artist_id() {
-                return all_artist_id;
+            public String getAllArtistId() {
+                return allArtistId;
             }
 
-            public void setAll_artist_id(String all_artist_id) {
-                this.all_artist_id = all_artist_id;
+            public void setAllArtistId(String allArtistId) {
+                this.allArtistId = allArtistId;
             }
 
             public String getArtist() {
@@ -124,36 +144,36 @@ public class MVListInfo {
                 this.artist = artist;
             }
 
-            public String getArtist_id() {
-                return artist_id;
+            public String getArtistId() {
+                return artistId;
             }
 
-            public void setArtist_id(String artist_id) {
-                this.artist_id = artist_id;
+            public void setArtistId(String artistId) {
+                this.artistId = artistId;
             }
 
-            public String getDel_status() {
-                return del_status;
+            public String getDelStatus() {
+                return delStatus;
             }
 
-            public void setDel_status(String del_status) {
-                this.del_status = del_status;
+            public void setDelStatus(String delStatus) {
+                this.delStatus = delStatus;
             }
 
-            public String getMv_id() {
-                return mv_id;
+            public String getMvId() {
+                return mvId;
             }
 
-            public void setMv_id(String mv_id) {
-                this.mv_id = mv_id;
+            public void setMvId(String mvId) {
+                this.mvId = mvId;
             }
 
-            public String getPlay_nums() {
-                return play_nums;
+            public String getPlayNums() {
+                return playNums;
             }
 
-            public void setPlay_nums(String play_nums) {
-                this.play_nums = play_nums;
+            public void setPlayNums(String playNums) {
+                this.playNums = playNums;
             }
 
             public String getProvider() {

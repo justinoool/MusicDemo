@@ -14,8 +14,12 @@ import com.example.jack.musicdemo.common.utils.GlideUtils;
 import com.example.jack.musicdemo.data.MVFromKG;
 import com.example.jack.musicdemo.data.MVListInfo;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.jack.musicdemo.MyApplication.context;
 
 /**
  * Created by ${justin} on 2017/9/1515: 49
@@ -45,24 +49,23 @@ public class MVAdapter extends RecyclerView.Adapter<MVAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final MVListInfo.ResultBean.MvListBean resultBean = result.get(position);
-        GlideUtils.with(mContext,resultBean.getThumbnail()
-                ,R.drawable.a8p,holder.thumb);
-
+        //新版API直接可以下载图片了,不需要再修改------.replaceAll("\\{[^}]*\\}","240")
+        GlideUtils.with(context,resultBean.getThumbnail2(),
+                R.drawable.a8p,holder.thumb);
         if(!TextUtils.isEmpty(resultBean.getTitle())){
             holder.mvName.setText(resultBean.getTitle());
-        }else {
+        }else
             holder.mvName.setText(resultBean.getSubtitle());
-            holder.mvSinger.setText(resultBean.getArtist());
-        }
+        holder.mvSinger.setText(resultBean.getArtist());
 
         //如果有设置监听,则设置点击事件
         if(mOnItemClickListener != null){
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-       int pos = holder.getLayoutPosition();
+         int pos = holder.getLayoutPosition();
                     //拿到视屏id
-  mOnItemClickListener.onItemClick(holder.itemView, pos,result.get(pos).getMv_id());
+                    mOnItemClickListener.onItemClick(holder.itemView, pos,result.get(pos).getMvId());
                 }
             });
         }
@@ -91,6 +94,7 @@ public class MVAdapter extends RecyclerView.Adapter<MVAdapter.MyViewHolder> {
         void onItemClick(View view, int position,String mvID);
     }
     private OnItemClickListener mOnItemClickListener;
+
     public void setOnItemClickListener(OnItemClickListener onItemClickListener){
         this.mOnItemClickListener = onItemClickListener;
     }

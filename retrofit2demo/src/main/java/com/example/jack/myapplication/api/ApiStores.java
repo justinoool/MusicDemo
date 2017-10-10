@@ -1,5 +1,7 @@
 package com.example.jack.myapplication.api;
 
+
+import com.example.jack.myapplication.MVListInfo;
 import com.example.jack.myapplication.model.MVInfo;
 import com.example.jack.myapplication.model.WeatherModel;
 
@@ -19,6 +21,7 @@ public interface ApiStores {
     //baseUrl
     String API_SERVER_URL = "http://www.weather.com.cn/";
 
+    //"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.mv.searchMV&order=0&page_num=1&page_size=20"
     //MV播放地址
     String BASE_PARAMETERS_MVINFO = "http://tingapi.ting.baidu.com/v1/restserver/";
 
@@ -31,4 +34,7 @@ public interface ApiStores {
 
     @GET("ting")
      Call<MVInfo> getMVInfo(@Query("method") String method, @Query("mv_id") String MV_ID);
+
+    @GET("ting?method=baidu.ting.mv.searchMV&format=json&page_num=1&page_size={page_size}.txt")
+    Observable<String> getMVListInfo(@Query("page_size") String page_size);
 }
