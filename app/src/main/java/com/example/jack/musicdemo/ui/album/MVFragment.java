@@ -206,6 +206,7 @@ public class MVFragment extends Fragment {
                     @Override
                     public void onNext(MVListInfo mvListInfo) {
                         List<MVListInfo.ResultBean.MvListBean> mvList = mvListInfo.getResult().getMvList();
+
                         adapterVideoList.setData(mvList);
                     }
                 });
